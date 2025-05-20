@@ -1,0 +1,216 @@
+body {
+  font-family: Arial, sans-serif; /* Menentukan font default */
+  margin: 0; /* Menghilangkan margin default */
+  height: 100vh; /* memastikan halaman mengisi seluruh tinggi layar */
+  display: flex; /* Menggunakan Flex untuk tata letak */
+  background-repeat: no-repeat;
+  justify-content: center;  /* Vertikal center */
+  align-items: center; /* Horizontal center */
+  background : linear-gradient(to bottom, #ffff, #d0f0fd, #a6d8ff, #c2e9fb); /* warna background dengan gradasi*/
+}
+
+body.dark {
+  background:linear-gradient(to bottom, #d0efff, #2a9df4, #187bcd, #1167b1, #03254c);
+  color: #fff;
+}
+
+body.dark .popup-content { 
+  color: #2c2c2f;
+} /* mengatur warna font pop up saat dark mode */
+
+.toggle {
+  width: 100px;
+  height: 50px;
+  top: 10px;
+  right: 10px;
+  background: #f3f3f3;
+  border-radius: 50px;
+  margin: 1rem auto;
+  position: absolute;
+  cursor: pointer;
+  box-shadow: inset 5px 5px 10px #ccc, inset -5px -5px 10px #fff;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  right: 10px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease;
+}
+
+body.dark .circle {
+  left: 55px;
+  background: #2c2c2f;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  transition: opacity 0.4s;
+}
+
+.sun {
+  color: #FFD600;
+  opacity: 1;
+}
+
+.moon {
+  color: #fff;
+  opacity: 0;
+}
+
+body.dark .sun {
+  opacity: 0;
+}
+
+body.dark .moon {
+  opacity: 1;
+}
+
+
+.container {
+  padding: 20px; /* Mengatur ruang di dalam kotak */
+  background-color: white; /* Warna latar belakang container */
+  border-radius: 10px; /* Membuat sudut menjadi melengkung */
+  width: 350px; /* Mengatur lebar container */
+  box-shadow: 0 3px 18px rgba(0, 0, 0, 0.1); /* Efek bayangan halus di container */
+  text-align: center;  /* Menyusun teks di tengah */
+}
+
+.logo {
+  width: 90px; /* ukuran logo lebih kecil */
+  margin-bottom: 5px; /* Menjaga margin bawah logo */
+}
+
+h2 {
+  margin-bottom: 20px; /* Memberikan margin bawah  */
+  color: white; /* Warna teks*/
+  font-size: 30px; /* Ukuran font*/
+  text-shadow:  0 0 5px #ABD7EB, /* Warna pada text agar ada shadow */
+  0 0 5px #91D4E8, 
+  0 0 10px #77D0E5,
+  0 0 20px #5DCDE1,
+  0 0 30px #43C9DE; 
+}
+
+/* Mengatur container semua button */
+.button-group {
+  display: flex; /* Menggunakan Flex untuk tata letak */
+  justify-content: center;  /* Vertikal center */
+  gap: 10px; /* spasi antar tombol */
+  flex-wrap: wrap; /* Jika terlalu panjang akan turun ke baris berikutnya */
+}
+
+/* Mengatur tampilan semua button */
+.button-group button { 
+  width: 100px; /* Mengatur ukuran */
+  padding: 10px 0; /* Padding atas dan bawah */
+  font-size: 14px; /* Ukuran font*/
+  border: none;  /* Menghapus garis tepi (border) pada elemen */
+  border-radius: 6px; /* Membuat sudut menjadi melengkung */
+  background-color: #3085d6; /* Warna button */
+  color: white; /* Warna font pada button */
+  cursor: pointer; /* Mengubah kursor saat pencet button */ 
+  transition: background-color 0.3s; /* Efek transisi perubahan warna background */
+  text-align: center; /* Menyusun teks di tengah */
+    box-shadow: 0 0 10px #a7dcfc; /* Efek bayangan halus di button */
+}
+
+.button-group button:hover {
+  background-color: #2565a8; /* Warna button berubah saat di sentuh */
+}
+
+/* Overlay latar belakang */
+.popup {
+  display: flex; /* Menggunakan Flex untuk tata letak */
+  justify-content: center; /* Vertikal center */
+  align-items: center; /* Horizontal center */
+  position: fixed; /* Tetap di tempat saat di-scroll */
+  z-index: 999; /* Di atas elemen lainnya */
+  left: 0;  /* Menempatkan elemen di kiri */
+  top: 0; /* Menempatkan elemen di atas */
+  width: 100%; /* Mengatur lebar */
+  height: 100%; /* Mengatur tinggi */
+  background-color: transparent; /* Warna latar belakang pop up */
+}
+
+/* Isi popup */
+.popup-content { 
+  background-color: #fff; /* Warna latar belakang untuk isi pop up */
+  padding: 20px;   /* mengatur padding atas bawah */
+  width: 400px; /* ukuran tetap */
+  text-align: center; /* Menyusun teks di tengah */
+  border-radius: 10px; /* Membuat sudut menjadi melengkung */
+  position: relative; /* Mengatur posisi elemen pada pop up */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);  /* Efek bayangan halus di pop up */
+}
+
+/* Tombol close di pojok kanan atas */
+.close-btn { 
+  position: absolute; /* Mengatur posisi button */
+  top: 10px; /* Mengatur jarak atas */
+  right: 15px; /* Mengatur jarak kanan */
+  font-size: 24px; /* Ukuran font*/
+  color: #888; /* Warna font pada button */
+  cursor: pointer; /* Mengubah kursor saat pencet button */ 
+}
+
+/* Gambar */
+.popup-image {
+  width: 90%; /* Mengatur ukuran */
+  height: auto; /* Tinggi menyesuaikan */
+  border-radius: 10px; /* Membuat sudut menjadi melengkung */
+  margin-bottom: 15px; /* Mengatur jarak bawah */
+}
+
+/* Tombol Tutup */
+.close-button {
+  background-color: #8b5cf6; /* Warna button */
+  color: white; /* Warna font pada button */
+  border: 2px solid #c4b5fd; /* ungu muda di border */
+  padding: 8px 20px;  /* mengatur padding atas bawah */
+  border-radius: 10px; /* Membuat sudut menjadi melengkung */
+  font-size: 15px; /* Ukuran font*/
+  font-weight: bold; /* font menjadi tebal */
+  cursor: pointer; /* Mengubah kursor saat pencet button */ 
+  transition: 0.3s ease; /* Efek transisi perubahan warna background */
+  box-shadow: 0 0 12px #c4b5fd; /* shadow halus warna ungu muda */
+
+}
+.close-button:hover {
+  background-color: #732d91; /* Warna button berubah saat di sentuh */
+}
+
+.custom-confirm {
+  background-color: #8b5cf6; /* Warna latar belakang */
+  color: white; /* Warna font pada button */
+  border: 2px solid #c4b5fd; /* Garis tepi ungu muda */
+  border-radius: 10px;  /* Membuat sudut menjadi melengkung */
+  padding: 8px 20px; /* mengatur padding atas bawah */
+  font-weight: bold; /* font menjadi tebal */
+  box-shadow: 0 0 15px #c4b5fd; /* shadow halus warna ungu muda */
+  font-size: 14px; /* Ukuran font*/
+  transition: 0.3s; /* Efek transisi perubahan warna background */
+}
+
+.custom-confirm:hover {
+  background-color: #7c3aed; /* Warna button berubah saat di sentuh */
+}
+
+.swal2-icon.swal2-warning {
+  border-color: #6ED1F2 !important;  /* Mengubah warna garis ikon peringatan */
+  color: #6ED1F2 !important;   /* Mengubah warna ikon */
+  box-shadow: 0 0 12px #6ED1F2, 0 0 20px #6ED1F2, 0 0 30px #6ED1F2; /* Warna pada ikon agar ada shadow */
+  text-shadow: 0 0 5px #6ED1F2;      /* Efek glow pada teks di ikon */
+}
+

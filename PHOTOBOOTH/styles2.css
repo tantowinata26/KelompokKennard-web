@@ -1,0 +1,147 @@
+
+      body { /*Background*/
+          margin: 0;  /* Menghilangkan margin default */
+          padding: 0; /*Mengatur ruang dalam kotak*/
+          background-color: #a7dcfc; /*Background berwarna biru muda*/
+          font-family: Arial, sans-serif; /*Menentukan font default*/
+          display: flex; /*Menggunakan Flex untuk tata letak*/
+          justify-content: center; /*Vertikal Center*/
+          align-items: center; /*Horizontal Center*/
+          min-height: 100vh; /*Menentukan tinggi minimum*/
+      }
+
+      .main-container {
+        width: 100%; /* Mengatur lebar container */
+        display: flex; /*Menggunakan Flex untuk tata letak*/
+        justify-content: center;/*Vertikal Center*/
+        padding: 20px; /*Mengatur ruang dalam kotak*/
+      }
+
+      .container {
+            background-color: #5b92b3; /*Warna backgound biru tua*/
+            padding: 30px;/*Mengatur ruang dalam kotak*/
+            border-radius: 20px; /* Membuat sudut menjadi melengkung */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Efek bayangan halus di container */
+            width: 100%; /* Mengatur lebar container */
+            max-width: 600px; /* Menentukan lebar maximum */
+            height: auto; /* Mengatur tinggi menjadi mengikut isi konten */
+            text-align: center;  /* Menyusun teks di tengah */
+      }
+
+      .title-container {
+        display: flex; /*Menggunakan Flex untuk tata letak*/
+        align-items: center; /*Horizontal Center*/
+        justify-content: center; /*Vertikal Center*/
+        margin-bottom: 20px; /* Memberikan margin bawah  */
+        position: relative; /*menggeser elemen dari posisi asli tanpa mengubah 
+        posisi elemen lain*/
+      }
+
+      .logo{
+        width: 50px; /* Mengatur lebar logo */
+        top: -10px;
+        height: auto; /* Mengatur tinggi logo */
+        position: absolute; /*mengatur penempatan logo*/
+        left: 170px; /*mengatur jarak logo dari sisi kiri*/
+      }
+
+      .title-container h1{
+        margin: 0;  /* Menghilangkan margin default */
+        color: white;  /* Mengatur warna huruf container menjadi putih */
+        font-size: 25px;  /* Mengatur ukuran font */
+
+      }
+
+      video, .controls, #photos {
+        margin-left: auto;  /* Mengatur margin kiri */
+        margin-right: auto; /* Mengatur margin kanan */
+      }
+
+      video {
+              width: 100%; /* Mengatur lebar kamera */
+              max-width: 400px; /* Mengatur lebar maksimal kamera */
+              height: auto; /* Mengatur tinggi kamera */
+              border: 6px solid white; /* Mengatur lebar logo */
+              border-radius: 15px; /* Membuat border kamera */
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Efek bayangan halus di container */
+              display: block; /* Membuat tata letak yang dinamis */
+              margin: 0 auto; /* Menghilangkan margin default */
+              background-color: #000; /* Mengatur warna background hitam */
+      }
+
+      /* Kontainer untuk elemen kontrol (input dan tombol) */
+.controls {
+  margin-top: 20px; /* Jarak dari elemen atas */
+  display: flex; /* Menggunakan flexbox */
+  justify-content: center; /* Pusatkan konten secara horizontal */
+  gap: 10px; /* Jarak antar elemen */
+}
+
+/* Gaya untuk input di dalam .controls */
+.controls input {
+  padding: 10px; /* Ruang di dalam input */
+  border: none; /* Tanpa border default */
+  border-radius: 8px; /* Sudut membulat */
+  width: 120px; /* Lebar input */
+  font-size: 14px; /* Ukuran font */
+  text-align: center; /* Teks di tengah */
+}
+
+/* Gaya untuk tombol di dalam .controls */
+.controls button {
+  background-color: #4caf50; /* Warna latar hijau */
+  color: white; /* Warna teks putih */
+  border: none; /* Tanpa border */
+  border-radius: 8px; /* Sudut membulat */
+  padding: 10px 20px; /* Ruang dalam tombol */
+  font-size: 14px; /* Ukuran teks */
+  cursor: pointer; /* Ubah kursor saat hover */
+  transition: background-color 0.3s; /* Efek transisi saat hover */
+}
+
+/* Efek hover untuk tombol .controls */
+.controls button:hover {
+  background-color: #45a049; /* Warna lebih gelap saat hover */
+}
+
+/* Kontainer galeri foto */
+#photos {
+  display: flex; /* Menggunakan flexbox */
+  flex-wrap: wrap; /* Foto turun ke baris baru jika penuh */
+  margin-top: 20px; /* Jarak atas */
+  justify-content: center; /* Foto dipusatkan secara horizontal */
+}
+
+/* Setiap item foto */
+.photo {
+  margin: 10px; /* Jarak antar foto */
+  position: relative; /* Untuk posisi absolut tombol di dalamnya */
+}
+
+/* Gaya gambar di dalam .photo */
+.photo img {
+  width: 160px; /* Lebar gambar */
+  height: 120px; /* Tinggi gambar */
+  border: 2px solid #333; /* Border gelap */
+  border-radius: 5px; /* Sudut membulat */
+}
+
+/* Gaya tombol di dalam .photo */
+.photo button {
+  position: absolute; /* Posisi absolut relatif ke .photo */
+  bottom: 5px; /* Jarak dari bawah foto */
+  left: 50%; /* Posisi horizontal di tengah */
+  transform: translateX(-50%); /* Koreksi posisi ke tengah */
+  padding: 5px 10px; /* Ruang dalam tombol */
+  font-size: 12px; /* Ukuran teks kecil */
+  border: none; /* Tanpa border */
+  background-color: #2196f3; /* Warna latar biru */
+  color: white; /* Warna teks putih */
+  border-radius: 5px; /* Sudut membulat */
+  cursor: pointer; /* Kursor berubah saat hover */
+}
+
+/* Efek hover untuk tombol dalam .photo */
+.photo button:hover {
+  background-color: #1976d2; /* Warna lebih gelap saat hover */
+}

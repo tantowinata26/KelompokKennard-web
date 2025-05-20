@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- judul halaman pada tab browser -->
+    <title>ICT</title>
+
+    <!-- Tautan ke file CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+
+    <!-- Menambahkan SweetAlert2 untuk membuat pop up -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <div class="toggle" id="toggle">
+      <div class="circle">
+        <svg class="icon sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3v2m6.364.636l-1.414 1.414M21 12h-2M17.364 17.364l-1.414-1.414M12 21v-2M6.636 17.364l1.414-1.414M3 12h2M6.636 6.636l1.414 1.414M12 8a4 4 0 100 8 4 4 0 000-8z" fill="currentColor"/></svg>
+        <svg class="icon moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3c.01 0 .02 0 .03 0A7 7 0 0021 12.79z" fill="currentColor"/></svg>
+      </div>
+    </div>
+  </head>
+  <body>
+
+    <p id="currentTime"></p>
+    
+     <!-- container utama untuk isi halaman -->
+    <div class="container">
+
+    <!-- Menampilkan logo -->
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxMivAHBSU2HCS6bTGTzVkO0Tyg1CEUxLJLA&s" alt="Logo" class="logo" />
+
+    <!-- Judul -->
+      <h2>Selamat Datang di Website Kami</h2>
+
+    <!-- Grup untuk semua tombol -->
+      <div class="button-group"> 
+
+       <!-- Tombol untuk HAKI -->
+        <button id="hakiBtn">HAKI</button>
+       <!-- Tombol untuk Photobooth -->
+        <button id="photoboothBtn">Photobooth</button>
+       <!-- Tombol untuk About -->
+        <button id="aboutBtn">About</button>
+      </div>
+    </div>
+
+  <!-- Pop up tersembunyi akan muncul saat diperlukan -->
+  <div id="popup" class="popup">
+  <div class="popup-content">
+
+  <!-- Tombol (X) untuk menutup popup -->
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+
+  <!-- Gambar  -->
+    <img src="https://lh3.googleusercontent.com/d/1M9oJg_PkmtU_9F1uSYZE1VDmtNWvtWIi" alt="Photo kelompok" class="popup-image">
+
+    <!-- Judul di popup -->
+    <h2>Selamat datang</h2>
+
+    <!-- Isi popup -->
+    <p>Terima kasih telah mengunjungi website kelompok kami!</p>
+
+    <!-- Tombol untuk menutup popup -->
+    <button class="close-button" onclick="closePopup()">Lanjutkan</button>
+  </div>
+</div> 
+    
+<!-- Tautan ke file JS -->
+<script src="script.js"></script>
+
+  </body>
+</html>

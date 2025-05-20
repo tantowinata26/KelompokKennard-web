@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PHOTOBOOTH</title>
+    <!-- Link ke CSS -->
+    <link rel="stylesheet" href="styles2.css">
+  </head>
+  <body>
+    <!-- Container utama -->
+    <div class="main-container">
+
+      <!-- Container utama untuk isi photobooth -->
+      <div class="container">
+
+        <!-- Judul dan logo -->
+        <div class="title-container">
+          <!-- Logo sekolah -->
+          <a href="../index.html"> 
+          <img src="https://www.santa-laurensia.com/sutera/wp-content/uploads/2024/10/logo-las-286x300-1.png" 
+               alt="Logo" 
+               class="logo"> </a>
+          <!-- Judul aplikasi -->
+          <h1>Photo Booth</h1>
+        </div>
+
+        <!-- Menampilkan feed kamera langsung -->
+        <video id="video" autoplay></video>
+
+        <!-- Kontrol input dan button -->
+        <div class="controls">
+          <!-- Input waktu timer dalam detik -->
+          <input type="number" id="timer" min="0" placeholder="Timer (Sec)" />
+          <!-- button foto -->
+          <button id="capture-btn">Capture</button>
+        </div>
+
+        <!-- Tempat hasil foto -->
+        <div id="photos"></div>
+      </div>
+    </div>
+
+    <!-- Link ke Javascript -->
+    <script src="script2.js"></script>
+  </body>
+</html>

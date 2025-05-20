@@ -1,0 +1,192 @@
+/* Reset dan transisi dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+}
+
+/*Gaya dasar body (mode terang)*/
+body { 
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #000;
+} 
+
+/*Gaya body untuk mode gelap*/
+body.dark { 
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Header */
+.header {
+  background-color: #5b92b3;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/*gaya header dalam mode gelap*/
+body.dark .header {
+  background-color: #1e3a4c;
+}
+
+/*Logo dan judul*/
+.header-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/*Design logo*/
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+/*Tombol Navigasi */
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  background-color: #5b92b3;
+  padding: 10px 0;
+}
+
+/*Tombol Navigasi dalam dark mode*/
+body.dark .nav-buttons {
+  background-color: #1e3a4c;
+}
+
+/*design dasar tombol*/
+.nav-buttons button {
+  background-color: floralwhite;
+  color: #1DA1F2;
+  border: none;
+  padding: 10px 16px;
+  margin: 0 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*memberikan efek hover*/
+.nav-buttons button:hover {
+  background-color: #e0e0e0;
+}
+
+/*dark mode pada tombol*/
+body.dark .nav-buttons button {
+  background-color: #2a2a2a;
+  color: #87ceeb;
+}
+
+/*agar tombol nav-buttons button, memiliki hover*/
+body.dark .nav-buttons button:hover {
+  background-color: #3a3a3a;
+}
+
+/* Konten */
+.content {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: black;
+  padding-bottom: 60px;
+}
+
+/*Konten dengan mode gelap*/
+body.dark .content {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  padding-bottom: 60px;
+}
+
+/* Footer */
+.footer {
+  background-color: #5b92b3;
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/*Footer dalam mode gelap*/
+body.dark .footer {
+  background-color: #1e3a4c;
+}
+
+/* Toggle Dark Mode */
+.toggle {
+  width: 100px;
+  height: 50px;
+  background: #f3f3f3;
+  border-radius: 50px;
+  margin: 1rem auto;
+  position: relative;
+  cursor: pointer;
+  box-shadow: inset 5px 5px 10px #ccc, inset -5px -5px 10px #fff;
+}
+
+/*Design Lingkaran dalam toggle*/
+.circle {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease;
+}
+
+/*Lingkaran dalam mode gelap*/
+body.dark .circle {
+  left: 55px;
+  background: #2c2c2f;
+}
+
+/*Design icon dasar*/
+.icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  transition: opacity 0.4s;
+}
+
+/*Untuk icon matahari*/
+.sun {
+  color: #FFD600;
+  opacity: 1;
+}
+
+/*Untuk icon bulan*/
+.moon {
+  color: #ffffff;
+  opacity: 0;
+}
+
+/*Icon matahari dalam mode gelap*/
+body.dark .sun {
+  opacity: 0;
+}
+
+/*Icon bulan dalam mode gelap*/
+body.dark .moon {
+  opacity: 1;
+}
+
+/*Untuk list menjorok sedikit ke kanan*/
+.sub li {
+  margin-left: 20px;
+}
+

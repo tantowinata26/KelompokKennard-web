@@ -1,0 +1,252 @@
+.dark-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #eee;
+  color: #333;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.4s ease;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color : #00bfff; /* Biru terang */;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px;
+  font: 1.2em sans-serif;
+  margin-top: 20px;
+}
+
+
+caption {
+  background: white;
+  margin: 20px auto;
+  padding: 16px 20px;
+  border-radius: 12px;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+
+body.dark {
+  background: linear-gradient(to bottom, #d0efff, #2a9df4, #187bcd, #1167b1, #03254c);
+  color:  #00bfff;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.toggle {
+  width: 100px;
+  height: 50px;
+  background: #f3f3f3;
+  border-radius: 50px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  margin: 1rem auto;
+  cursor: pointer;
+  box-shadow: inset 5px 5px 10px #ccc, inset -5px -5px 10px #fff;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease;
+}
+
+body.dark .circle {
+  left: 55px;
+  background: #2c2c2f;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  transition: opacity 0.4s;
+}
+
+.sun {
+  color: #FFD600;
+  opacity: 1;
+}
+
+.moon {
+  color: #fff;
+  opacity: 0;
+}
+
+body.dark .sun {
+  opacity: 0;
+}
+
+body.dark .moon {
+  opacity: 1;
+}
+
+  .title {
+  font-size: 2.5em;
+  color: #1e88e5;
+}
+
+.long-container {
+  margin: 60px auto;
+  width: 100%;
+  max-width: 1000px;
+  padding: 100px;
+  background-color: #e3f2fd;
+  border-left: 20px solid #1976d2;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 1.2em;
+  color: black;
+}
+
+body.dark .long-container {
+  color: #eee;
+  background: #121212;
+  border-left: 20px solid #023047;
+}
+
+ .container-widi {
+  margin: 60px;
+  width: 100%;
+  max-width: 1000px;
+  padding: 50px;
+  background-color: #e3f2fd;
+  border-left: 20px solid #1976d2;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 1.2em;
+  color: black;
+  text-align: center;
+  font-size: 20px;
+  color: #555;
+ }
+
+ body.dark .container-widi {
+  color: #eee;
+  background: #121212;
+  border-left: 20px solid #023047;
+ }
+
+ .foto-widi {
+  transform: rotate(180deg);
+ }
+
+img {
+  max-width: 100%;  /* Lebar horizontal pada foto */
+  height: 100%;
+  border-radius: 15px;
+}
+
+.logo-header {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 20px;
+  justify-content: center; /* atau space-between jika ingin kiri-kanan */
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 40px #39ff14;
+}
+
+.logo-img {
+  height: 75px;
+  width: 75px; /* Otomatis menyesuaikan lebar sesuai rasio gambar */
+  border-radius: 10px; /* Opsional jika ingin sedikit melengkung */
+  display: flex;
+  justify-content: center;
+}
+
+.neon-title{
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #00ffff;
+  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
+}
+
+.profile-card {
+  background: #fff;
+  object-fit: cover; 
+  width: 110%;
+  max-width: calc(33.33% - 40px);
+  min-height: 300px;
+  border-radius: 10px;  /* Ketajaman ujung foto */
+  margin-bottom: 30px;
+  box-shadow: -1px 0px 14px 0px #000000;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 20px;
+  color: black;
+  flex: 1 1 calc(33.33% - 40px);
+}
+
+body.dark .profile-card {
+  background: #121212;
+  color: #eee;
+}
+
+body.dark .profile-card .desc {
+  color: #eee;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; /* Posisi header */
+  padding: 50px; /* Tinggi header */
+  gap: 20px; /* Jarak setiap card */
+
+}
+
+.profile-card img {
+  width: 200px;
+  height: 100px;
+  border-radius: 10%;
+  margin-bottom: 30px;
+  object-fit: cover;
+  box-shadow: -1px 0px 14px 0px #000000;
+}
+
+.profile-card h2 {
+  font-size: 20px; /* Ukuran Font untuk nama */
+  margin: 2px 0 5px;
+}
+
+.profile-card .desc {
+  font-size: 16px; /* Ukuran font untuk roasting / quotes */
+  color: #555; /* Warna font untuk roasting / quotes */
+}
+
+
